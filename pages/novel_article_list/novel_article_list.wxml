@@ -1,0 +1,27 @@
+<!-- 原创章节目录 -->
+<view wx:for="{{articleList}}" class='sec_article_list_box'>
+  <!-- 章标题 -->
+  <view class="sec_article_list_tit"><em class="arr">◆</em>{{item.title}}</view>
+  <block wx:for="{{item.sections}}">
+    <!-- 当前文章所在章节 -->
+    <block wx:if="{{item.sectionid == subChapterId}}"> 
+      <view class="sec_article_list_item active" bindtap='navToChapterRead' data-chap-id="{{item.chapterid}}" data-sec-id="{{item.sectionid}}" data-wxtit="{{wxTit}}">
+        <text class='item_tit'>{{item.title}}</text>
+        <!-- 节标题 -->
+        <view  class='item_pay' wx:if="{{item.isvip==1}}"><text>VIP</text></view>
+        <view  class='item_pay' wx:elif="{{item.isvip==0}}"><text>免费</text></view>
+        <!-- 节付费tips -->
+      </view>
+    </block> 
+    <!-- 其他章节 -->
+    <block wx:else>
+      <view class="sec_article_list_item" bindtap='navToChapterRead'  data-chap-id="{{item.chapterid}}" data-sec-id="{{item.sectionid}}" data-wxtit="{{wxTit}}">
+        <text class='item_tit'>{{item.title}}</text>
+        <!-- 节标题 -->
+        <view class='item_pay' wx:if="{{item.isvip==1}}"><text>VIP</text></view>
+        <view class='item_pay' wx:elif="{{item.isvip==0}}"><text>免费</text></view>
+        <!-- 节付费tips -->
+      </view>
+    </block>
+  </block>
+</view>

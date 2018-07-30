@@ -1,0 +1,38 @@
+<!-- toast提醒 -->
+<import src="../common/comm_toast.wxml"/>
+<!-- 引入富文本解析页面 -->
+<import src="../../wxParse/wxParse.wxml" />
+
+<loading hidden="{{!loading}}">{{subtitle}}</loading>
+
+<template is="comm_toast_box" data="{{commToast}}"/>
+
+
+<view class="{{modeCut=='night'?'mode_night':''}}">
+  <!-- 章节阅读 -->
+  <block wx:if="{{subChapterCard}}">
+    <block>
+      <view class="chapter_read">
+        <!--view class='chapter_tit'>{{subChapterCard.title}}</view>-->
+        <!-- <view class='chapter_text'>{{subChapterCard.content}}</view> -->
+        <view class='chapter_text'>
+          <template is="wxParse" data="{{wxParseData:subChapterCard.nodes}}" />
+        </view>
+      </view>
+    </block>
+  </block>
+
+  <!-- 日/夜模式切换 -->
+  <view class="op_mode_cut" bindtap='modeCut'></view>
+
+  <!-- end 单篇文章 -->
+  <view wx:if="{{isArticle==0}}" class="menu_place">
+    <view class="menu_bar">
+      <view class="menu_btn_prevChap more" bindtap='navToOhterChapter' data-id="prev">上一章</view>
+      <view class="menu_btn_ArticleList" bindtap='navToArticleList'>目录</view>
+      <view class="menu_btn_nextChap more" bindtap='navToOhterChapter' data-id=
+      "next">下一章</view>
+    </view>
+  </view>
+  <!-- end 底部操作菜单 -->
+</view>

@@ -1,0 +1,70 @@
+<!-- 单本原创图书信息 -->
+
+<!-- 引入富文本解析页面 -->
+<import src="../../wxParse/wxParse.wxml" />
+
+<!-- 底部推荐书籍卡模板 -->
+<import src="../common/book_summ_card.wxml"/>
+<!-- 单本图书简介模板 -->
+<import src="../common/book_summ_intro.wxml"/>
+
+<loading hidden="{{!loading}}">{{subtitle}}</loading>
+<!-- 单本图书 -->
+<block wx:if="{{prevBookId != 0}}">
+  <view class="section" hidden="{{controlShow}}">
+    <template is="book_summ_intro" data="{{value:commSumm,type:'book'}}" />
+    <!-- end 单本图书简介 -->
+
+    <text class="sec_tit">看了本书的还看</text>
+    <template is="book_summ_card" data="{{items:'more',value:commCards,type:'book'}}" />
+    <!-- end 推荐书籍 -->
+  </view>
+  <view class="menu_place" hidden="{{controlShow}}">
+    <view bindtap='navToChapterRead' data-arti='{{commSumm.isarticle}}' data-id="{{commSumm.bookid}}" data-wxtit="{{commSumm.title}}" class='btn_readit'>阅读</view>
+  </view>
+  <!-- end 阅读按钮 -->
+</block>
+<!-- 单个视频 -->
+<block wx:elif="{{prevVideoId != 0}}">
+  <view class="section" hidden="{{controlShow}}">
+    
+    <!-- 富文本限制不能引用 template -->
+    <!-- <template is="book_summ_intro" data="{{value:commSumm,type:'video'}}" /> -->
+    <view class="sec_book">
+      <view class="sec_book_box">
+        <view class="item_video_summ_tit">{{commSumm.title}}</view>
+        <video id="myVideo" autoplay src="{{commSumm.video}}" crossOrigin="anonymous" controls></video> 
+        <view class="item_video_summ_intro">
+          <template is="wxParse" data="{{wxParseData:description.nodes}}" />
+        </view> 
+        <view class="item_video_time">{{commSumm.published}}</view>
+      </view>
+    </view>
+    <!-- end 单本图书简介 -->
+
+    <text class="sec_tit">相关视频</text>
+     <template is="book_summ_card" data="{{items:'recommends',value:commCards,type:'video'}}" /> 
+    <!-- end 推荐书籍 -->
+  </view>
+</block>
+<!-- 单个书圈 -->
+<block wx:elif="{{prevCircleId != 0}}">
+  <view class="section">
+    <!-- 富文本限制不能引用 template -->
+    <!-- <template is="book_summ_intro" data="{{value:commSumm,type:'circle'}}" /> -->
+    <view class="sec_book">
+      <view class="sec_book_box">
+        <view class="item_video_summ_tit">{{commSumm.title}}</view> 
+        <view class="item_video_sum_author">{{commSumm.nickname}}<view class="item_circle_time">{{commSumm.created}}</view></view>
+        <view wx:if="{{commSumm.content}}" class="item_video_summ_intro item_circle_text">
+          <template is="wxParse" data="{{wxParseData:description.nodes}}" />
+        </view>  
+        <view class="item_no_summ" wx:else >
+          -  没有内容  -
+        </view>
+        <!-- <view class="item_circle_count">阅读9999</view> -->
+      </view>
+    </view>
+    <!-- end 单本图书简介 -->
+  </view>
+</block>

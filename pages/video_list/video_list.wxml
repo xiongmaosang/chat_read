@@ -1,0 +1,17 @@
+<!-- 原创图书列表页 -->
+
+<!-- 列表书籍卡模板 -->
+<import src="../common/book_summ_card.wxml"/>
+
+<loading hidden="{{!loading}}">{{subtitle}}</loading>
+
+<view class="section">
+  <template is="book_summ_card" data="{{items:'items',value:commCards,type:'video'}}" />
+  <!-- end 视频列表 -->
+</view>
+
+<!-- 加载更多部分 -->
+<view class="no_more_tips">
+    <view wx:if="{{hasMore}}"><text>玩了命的加载中...</text></view>
+    <view wx:else><text>没有更多内容了</text></view>
+</view>

@@ -1,0 +1,46 @@
+/* 分类页 */
+page{
+  background: #fff;
+}
+.book_cats{
+  padding: 0 23rpx;
+}
+.cats_tit{
+  padding: 36rpx 23rpx;
+  font-size: 30rpx;
+  line-height: 1;
+  color: #000; 
+}
+.cats_item{
+  flex-direction: row;
+  overflow: hidden;
+}
+.cat_item{
+  box-sizing: border-box;
+  float: left;
+  width: 26.8%;
+  margin:0 23rpx 38rpx;
+  background: #efefef;
+  color: #666;
+  font-size: 29rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border-radius: 29rpx; 
+}
+.cat_item:hover{
+  background: #ff2039;
+  color: #fff;
+}
+.cats_nomore{
+  height: 0;
+  border-bottom: 1px solid #dddddd;
+  font-size: 24rpx;
+  line-height: 1px;
+  color: #b2b2b2;
+  text-align: center;
+  margin: 40rpx 0 80rpx;
+}
+.cats_nomore text{
+  padding: 0 21rpx;
+  background: #fff;
+}

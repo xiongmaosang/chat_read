@@ -1,0 +1,21 @@
+<!-- 底部导航栏 -->
+<template  name="menu_bar">
+  <view class="menu_bar">
+    <view class="menu_item">
+      <navigator url="../novel_index/index" open-type="switchTab" hover-class="other-navigator-hover">
+      <i class="icon_novel"></i>原创</navigator>
+    </view>
+     <view class="menu_item">
+      <navigator url="../novel_index/index" open-type="switchTab" hover-class="other-navigator-hover">
+      <i class="icon_classify"></i>分类</navigator>
+    </view>
+     <view class="menu_item">
+      <navigator url="../novel_index/index" open-type="switchTab" hover-class="other-navigator-hover">
+      <i class="icon_mybook"></i>我的书</navigator>
+    </view>
+     <view class="menu_item">
+      <navigator url="../novel_index/index" open-type="switchTab" hover-class="other-navigator-hover">
+      <i class="icon_circle"></i>书圈</navigator>
+    </view>
+  </view>
+</template>

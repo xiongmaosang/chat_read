@@ -1,0 +1,18 @@
+<!-- 书圈列表页 -->
+
+<!-- 书籍卡模板 -->
+<import src="../common/book_summ_card.wxml"/>
+
+<!-- 加载pop -->
+<loading hidden="{{!loading}}">{{subtitle}}</loading>
+
+<view class="section">
+  <template is="book_summ_card" data="{{items:'items',value:bookCards,type:'circle'}}" />
+  <!-- end 书圈文章列表 -->
+</view>
+
+<!-- 加载更多部分 -->
+<view class="no_more_tips">
+    <view wx:if="{{hasMore}}"><text>玩了命的加载中...</text></view>
+    <view wx:else><text>没有更多内容了</text></view>
+</view>

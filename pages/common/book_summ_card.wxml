@@ -1,0 +1,54 @@
+<!--原创首页列表书籍卡：书籍封面，书籍名称，作者，书籍类型，书籍介绍-->
+<template name="book_summ_card">
+  <view  class='sec_list'>
+    <!-- 书籍列表 -->
+    <block wx:if="{{type=='book'|| type=='cats'}}">
+      <view bindtap='navToArticle' wx:for="{{value[items]}}"  data-id="{{item.bookid ? item.bookid : item.url}}" class="sec_list_item">
+          <!-- 书籍封面  -->
+          <view class="item_bookpic">
+            <image wx:if="{{item.thumb}}" mode=c.mode}}" src="http://upload.dajianet.com/{{item.thumb}}"></image>
+          </view>
+          <!--书籍简介  -->
+          <view class="item_bookintro_box">
+            <view class="item_booktit">{{item.title}}</view>
+            <view class="item_bookauthor">
+              <view class='item_authorname'>{{item.author_penname?item.author_penname:item.author}}</view>
+              <view wx:if="{{item.showtype}}" class="item_booktag">{{item.showtype}}</view>
+              <view wx:elif="{{item.tags}}" class="item_booktag">{{item.tags}}</view>
+            </view>
+            <view class="item_bookintro">{{item.description}}</view>
+          </view>
+      </view>
+    </block>
+    <!-- 视频列表 -->
+    <block wx:elif="{{type == 'video'}}">
+      <view bindtap='navToVideo' wx:for="{{value[items]}}"  data-id="{{item.contentid ? item.contentid : item.url}}" class="sec_list_item">
+          <!-- 书籍封面  -->
+          <view class="item_videopic">
+            <image mode=c.mode}}" src="http://upload.dajianet.com/{{item.thumb}}"></image>
+          </view>
+          <!--书籍简介  -->
+          <view class="item_videointro_box">
+            <view class="item_videotit">{{item.title}}</view>
+            <view class="item_bookintro">{{item.description}}</view>
+          </view>
+      </view>
+    </block>
+    <!-- 书圈列表 -->
+    <block wx:elif="{{type == 'circle'}}">
+      <view bindtap='navToVideo' wx:for="{{value[items]}}"  data-id="{{item.col_doc_id}}" class="sec_list_item">
+          <!-- 书籍封面  -->
+          <view class="item_videopic">
+            <image mode=c.mode}}" src="{{item.thumb}}"></image>
+          </view>
+          <!--书籍简介  -->
+          <view class="item_videointro_box">
+            <view class="item_videotit">{{item.coldoctitle}}</view>
+            <view class="item_bookintro">{{item.colauthor}}
+              <!-- <text class='item_circle_read'>阅读888</text> -->
+            </view>
+          </view>
+      </view>
+    </block>
+  </view>
+</template>

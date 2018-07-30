@@ -1,0 +1,52 @@
+<!--index.wxml 原创首页-->
+<!-- 列表书籍卡模板 -->
+<import src="../common/book_summ_card.wxml"/>
+<!-- 菜单导航 -->
+<import src="../common/menu_bar.wxml"/>
+
+<loading hidden="{{!loading}}">{{subtitle}}</loading>
+
+<view class="section">
+  <text class="sec_tit">本期推荐</text>
+  <swiper indicator-dots="{{ true }}"
+        autoplay="{{ true }}" interval="{{ interval }}" duration="{{duration}}" circular="{{ true }}">
+    <block wx:for="{{imgUrls}}">
+        <swiper-item>
+            <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+    </block>
+</swiper>
+  <view class="flexBookWrapper">
+    <view class="flexBook">
+        <text class="flexBooktext1">发现好书</text>
+        <text class="flexBooktet ">一起淘好书</text>
+        <image style="width:70%;margin-top:10rpx" src="http://upload.dajianet.com/2016/0408/1460047820854.jpg"></image>
+    </view>
+    <view class="flexBook">
+        <text class="flexBooktext2">新鲜上榜</text>
+        <text class="flexBooktet">爽文抢鲜读</text>
+        <image style="width:70%;margin-top:10rpx" src="http://upload.dajianet.com/2015/0610/1433898275243.jpg"></image>
+    </view>
+    <view class="flexBook">
+        <text class="flexBooktext3">完本精选</text>
+        <text class="flexBooktet">完本免费看</text>
+        <image style="width:70%;margin-top:10rpx" src="http://upload.dajianet.com/2018/0125/1516848226696.jpg"></image>
+    </view>
+</view>
+
+  <text class="sec_tit">重磅好文</text>
+  <template is="book_summ_card" data="{{items:'hots',value:commCards,type:'book'}}" />
+  <!-- end 重磅好文 -->
+
+  <text class="sec_tit">精品推荐</text>
+  <template is="book_summ_card" data="{{items:'recommends',value:commCards,type:'book'}}" />
+  <!-- end 精品推荐 -->
+</view>
+<view class="sec_more" bindtap='navToNovelList'>
+    · 全部原创 · 
+</view>
+<!-- 全部原创按钮 -->
+<!-- <view class="menu_place">
+  <template is="menu_bar"/>
+</view> -->
+<!-- 底部菜单 -->

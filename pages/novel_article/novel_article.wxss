@@ -1,0 +1,141 @@
+page{
+  background: #f5f5f5;
+}
+/* 阅读按钮 */
+.btn_readit{
+  padding: 30rpx 0;
+  text-align: center;
+  background: #ff4b4b;
+  color: #fff;
+  font-size: 36rpx;
+  line-height: 1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* 单本原创图书信息 */
+.sec_book{
+  border-bottom: 18rpx solid #f5f5f5;
+}
+.sec_book_box{
+  padding:30rpx 38rpx;
+}
+.sec_book_item{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30rpx;
+}
+.item_book_summ_tit{
+  height: 68rpx;
+  overflow: hidden;
+}
+.item_bookremark{
+  color: #ff4b4b;
+  margin:10rpx 0 30rpx;
+}
+/* 单本图书作者 */
+.item_book_summ_author{
+  color: #888;
+}
+.item_book_summ_intro{
+  font-size: 28rpx;
+  line-height: 50rpx;
+  color: #020202;
+  text-indent: 52rpx;
+  word-break: break-all;
+}
+/* 书籍目录按钮 */
+.sec_book_catabar{
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid #f3f3f3;
+  padding: 30rpx 38rpx;
+  font-size: 28rpx;
+  line-height: 1;
+}
+.btn_book_catabar{
+  width: 150rpx;
+  padding: 30rpx 38rpx;
+  margin: -30rpx -38rpx;
+  color: #ff2222; 
+}
+.btn_book_catabar .icon_catabar{
+  width: 32rpx;
+  height: 28rpx;
+  margin-right: 26rpx;
+  display: inline-block;
+  vertical-align: top;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAoCAYAAACxbNkLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzQwQUM3MTZEQ0I0MTFFNzgwMjJCMjRGMUVENkI2OTkiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzQwQUM3MTdEQ0I0MTFFNzgwMjJCMjRGMUVENkI2OTkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3NDBBQzcxNERDQjQxMUU3ODAyMkIyNEYxRUQ2QjY5OSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NDBBQzcxNURDQjQxMUU3ODAyMkIyNEYxRUQ2QjY5OSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Prf/jOoAAAHuSURBVHja7Jk7SANBEIb3QgqbqERE0OC78FFpYWVrmhwKKQSLkEYEG2MlYikqKAgqCFqolWCt24iNhVjZKEbEB0jACBZWkmCh5z/eBTXcKBbiIPvDP+F29sJ+udvczq3lxGIJpdQyHFLvSsNRpXVW+cm2k4izcJWSoyt4MIAwVQRDaoeHGJgyxBVhMKRmeI2AapkOdUx7A1yiZKqJgLJM8pZpz8DPQoEyBDTvk3iAN3xP0ZpyEwKh8vCo5TgOzYsaHFR6iZe3CaZ1jj3VtinSXKqHLQEw9ONe05hdoJ/KBfo7ac2mAuqfyQAZIANkgAyQATJABoiXhYo1gs9JOPyh/RSeYReotl2NOOYtTqXoGJ4LIizC8aJkH1wKj/jA0FXdg9uEXRwacysNrpvp0Mu0twiEKShOQE9M8pFpzwmeQnkC2maSq0wtcoO4IxRoKehN7vuiP4UTtgR31a/ct0KNgmCO4E1TsZoHqwEyQAbIABkgA8Qr6D35O9Tn/aALPI3Pvjm3U/F7S78r/5VKGmO+pAIvioNdnw4D6LDFfOECYkrYxaE13DDdcgmmw/gX1WpK4N1G2zrTBFTOdAgx7RWCp1A44NXifjpk2s/hO6FA+zSH6BY6UO5mcEG0Rd7jFXN+t10X4jocEfaSJPkqwADTcmqT2tCGwwAAAABJRU5ErkJggg==) no-repeat;
+  background-size: 100% 100%;
+}
+.txt_book_update{
+  width: 100%;
+  text-align: right;
+  color: #888;
+}
+
+/* 单本视频 */
+
+video {
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+.item_video_summ_tit{
+  font-size: 34rpx;
+  line-height: 48rpx;
+  margin-bottom: 30rpx;
+}
+.item_video_sum_author{
+  color: #888888;
+  font-size: 20rpx;
+  margin-bottom: 30rpx;
+}
+.item_video_summ_intro {
+  font-family: 'Microsoft YaHei';
+  font-size: 28rpx;
+  line-height: 50rpx;
+  color: #020202!important;
+  text-indent: 52rpx;
+  word-break: break-all;
+  text-align: justify;
+}
+/* 替换富文本样式 */
+.item_video_summ_intro view {
+  font-family:inherit!important;
+  font-size: inherit!important;
+  line-height:inherit!important;
+  color: inherit!important;
+}
+.item_video_time{
+  text-align: right;
+  color: #888888;
+  font-size: 20rpx;
+  margin-top: 10rpx;
+}
+/* 单本书圈 */
+.item_circle_time{
+  float: right;
+}
+.item_circle_count{
+  font-size: 20rpx;
+  color:#888888;
+  line-height: 1;
+  margin-top:20rpx;
+}
+.item_no_summ{
+  text-align: center;
+  padding-bottom: 30rpx;
+  font-size: 30rpx;
+}
+/* 视频简介图片设定 */
+.wxParse-img{
+  display:block;
+  width: 100%!important;
+  margin: 23rpx 0;
+}
+/* 书圈相对路径图片隐藏 */
+.item_circle_text .wxParse-img{
+  display: none;
+}

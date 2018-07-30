@@ -1,0 +1,13 @@
+<!-- 分类标签页 -->
+<loading hidden="{{!loading}}">{{subtitle}}</loading>
+<!-- 所有标签 -->
+<view class='book_cats'>
+  <view class='cats_tit'>原创</view>
+  <view class="cats_item">
+    <view class="cat_item" bindtap='navToNovelList'>全部分类</view>
+    <block  wx:for="{{catCards}}">
+      <view class="cat_item" bindtap='navToNovelList' data-id="{{item.typeid}}" data-txt="{{item.name}}">{{item.name}}</view>
+    </block>
+  </view>
+  <view class="cats_nomore"><text>没有更多</text></view>
+</view>

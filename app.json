@@ -1,0 +1,52 @@
+{
+  "pages":[
+    "pages/novel_index/index",
+    "pages/novel_article/novel_article",
+    "pages/comm_booklist/comm_booklist",
+    "pages/novel_article_list/novel_article_list",
+    "pages/novel_chapter_read/novel_chapter_read",
+    "pages/assort_list/assort_list",
+    "pages/video_list/video_list",
+    "pages/circle_list/circle_list"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "大佳阅读",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#b2b2b2",
+    "borderColor": "#fff",
+    "backgroundColor":"#fff",
+    "selectedColor": "#ff4b4b",
+    "list": [
+      {
+        "pagePath": "pages/novel_index/index",
+        "text": "原创",
+        "selectedIconPath": "/images/icon_tabBar_novel_on.png",
+        "iconPath": "/images/icon_tabBar_novel.png"
+        
+      },
+      {
+        "pagePath": "pages/assort_list/assort_list",
+        "text": "分类",
+        "selectedIconPath": "/images/icon_tabBar_assort_on.png",
+        "iconPath": "/images/icon_tabBar_assort.png"
+      },
+      {
+        "pagePath": "pages/video_list/video_list",
+        "text": "我的书",
+        "selectedIconPath": "/images/icon_tabBar_myBook_on.png",
+        "iconPath": "/images/icon_tabBar_myBook.png"
+      },
+      {
+        "pagePath": "pages/circle_list/circle_list",
+        "text": "书圈",
+        "selectedIconPath": "/images/icon_tabBar_circle_on.png",
+        "iconPath": "/images/icon_tabBar_circle.png"
+      }
+    ]
+  }
+}

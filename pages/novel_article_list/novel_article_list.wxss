@@ -1,0 +1,43 @@
+/* 章节列表标题 */
+.sec_article_list_box{
+  background: #fff;
+  color: #080808;
+  line-height: 1;
+}
+.sec_article_list_tit{
+  padding: 70rpx 40rpx 36rpx;
+  font-size: 34rpx;
+  line-height: 1;
+  border-bottom: 1px solid #eaeaea;
+}
+.sec_article_list_tit .arr{
+  display: inline-block;
+  color: #ff4b4b;
+  height: 34rpx;
+  overflow: hidden;
+  font-size: 24rpx;
+  line-height: 38rpx;
+  margin-right: 10rpx;
+  vertical-align:top;
+  transform:scale(1.1,1.4);
+}
+.sec_article_list_item{
+  display: flex;
+  flex-direction: row;
+  padding: 40rpx;
+  font-size: 28rpx;
+  border-bottom: 1px solid #eaeaea;
+  border-left:6rpx solid transparent;
+}
+.sec_article_list_item.active{
+  color: #ff4b4b;
+  border-left-color:#ff4b4b; 
+}
+.sec_article_list_item .item_tit{
+  width: 100%;
+}
+.sec_article_list_item .item_pay{
+  width: 80rpx;
+  text-align: right;
+  color: #696969;
+}
